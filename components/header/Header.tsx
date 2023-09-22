@@ -1,6 +1,7 @@
 import { Bars3Icon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
-import { NavLinks } from '../navLinks/NavLinks';
+import { NavLinks } from '..';
+import { SearchBox } from '..';
 
 export const Header = () => (
   <header>
@@ -16,5 +17,6 @@ export const Header = () => (
       </div>
     </div>
     <NavLinks />
+    <SearchBox />
   </header>
 );
