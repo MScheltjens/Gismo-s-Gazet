@@ -12,9 +12,13 @@ export const DarkModeButton = () => {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    console.log(mounted);
+  }, [mounted]);
+
   if (!mounted) return null;
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  return <div>{currentTheme === 'dark' ? <SunIcon className="w-8 h-8 hover:cursor-pointer text-yellow-500" onClick={() => setTheme('light')} /> : <MoonIcon className="w-8 h-8 hover:cursor-pointer text-gray-900" onClick={() => setTheme('dark')} />}</div>;
+  return <button>{currentTheme === 'dark' ? <SunIcon className="w-8 h-8 hover:cursor-pointer text-yellow-500" onClick={() => setTheme('light')} /> : <MoonIcon className="w-8 h-8 hover:cursor-pointer text-gray-900" onClick={() => setTheme('dark')} />}</button>;
 };
