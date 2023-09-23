@@ -51,7 +51,6 @@ export const fetchNews = async (category?: Category | string, keywords?: string,
 
   const newsResponse = await res.json();
 
-  console.log(sortNewsByImage(newsResponse.data.myQuery));
   // Sort function by images vs not images
   return sortNewsByImage(newsResponse.data.myQuery);
 };
