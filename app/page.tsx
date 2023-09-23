@@ -3,7 +3,7 @@ import { fetchNews } from '@/lib';
 
 export default async function Home() {
   //fetch news data
-  const news: NewsResponse = await fetchNews(categories.join(','));
+  const news: NewsResponse = await fetchNews(categories[0]);
   console.log(news);
 
   return (
