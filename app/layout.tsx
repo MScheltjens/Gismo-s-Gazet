@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html>
       <body>
         <Providers>
-          <div className="bg-gray-100 dark:bg-zinc-900 transition-all">
+          <div className="bg-gray-100 dark:bg-zinc-900 transition-all min-h-screen">
             <Header />
             {children}
           </div>
