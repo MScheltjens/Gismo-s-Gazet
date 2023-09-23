@@ -15,7 +15,7 @@ export const Article = ({ article }: Props) => {
           <section className="mt-2 flex-1">
             <p className="text-sm line-clamp-6">{article.description}</p>
           </section>
-          <footer>
+          <footer className="text-xs ml-auto flex space-x-1 p-5 italic text-gray-400">
             <p>{article.source} -</p>
             <p>
               <LiveTimeStamp time={article.published_at} />
