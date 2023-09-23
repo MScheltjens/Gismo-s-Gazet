@@ -1,4 +1,4 @@
-import { ReadMoreButton } from '..';
+import { LiveTimeStamp, ReadMoreButton } from '..';
 
 type Props = {
   article: Article;
@@ -17,6 +17,9 @@ export const Article = ({ article }: Props) => {
           </section>
           <footer>
             <p>{article.source} -</p>
+            <p>
+              <LiveTimeStamp time={article.published_at} />
+            </p>
           </footer>
         </div>
         <ReadMoreButton article={article} />
