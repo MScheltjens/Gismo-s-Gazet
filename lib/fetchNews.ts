@@ -1,5 +1,6 @@
 import { gql } from 'graphql-request';
 import { sortNewsByImage } from '.';
+
 export const fetchNews = async (category?: Category | string, keywords?: string, isDynamic?: boolean) => {
   // GraphQL query
   const query = gql`
@@ -10,6 +11,7 @@ export const fetchNews = async (category?: Category | string, keywords?: string,
           category
           country
           description
+          image
           language
           published_at
           source
@@ -47,10 +49,8 @@ export const fetchNews = async (category?: Category | string, keywords?: string,
   console.log('LOADING NEW DATA FROM API for category >>> ', category, keywords);
 
   const newsResponse = await res.json();
-  // Sort function by images vs not images
-  const news = sortNewsByImage(newsResponse.data.myQuery);
 
-  console.log('news', news);
-  // return result
-  return news;
+  console.log(sortNewsByImage(newsResponse.data.myQuery));
+  // Sort function by images vs not images
+  return sortNewsByImage(newsResponse.data.myQuery);
 };

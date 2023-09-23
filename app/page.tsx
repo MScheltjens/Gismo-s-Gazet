@@ -1,14 +1,14 @@
+import { NewsList } from '@/components';
 import { categories } from '@/constants';
 import { fetchNews } from '@/lib';
+import response from '../response.json';
 
 export default async function Home() {
-  //fetch news data
-  const news: NewsResponse = await fetchNews(categories.join(','));
+  const news: NewsResponse = response || (await fetchNews(categories.join(',')));
 
   return (
     <main>
-      <h1>HomePage</h1>
-      <pre>{JSON.stringify(news, null, 2)}</pre>
+      <NewsList news={news} />
     </main>
   );
 }
