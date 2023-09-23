@@ -14,7 +14,7 @@ export default function Page({ searchParams }: PageProps) {
     <main>
       <article className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        {image !== 'null' || (image !== null && <img src={image} alt={title} className="h-50 max-w-md mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md" />)}
+        {image !== 'null' && image !== null && <img src={image} alt={title} className="h-50 max-w-md mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md" />}
         <div className="px-10">
           <h1 className="headerTitle px-0 no-underline pb-2">{title}</h1>
           <div className="flex">
