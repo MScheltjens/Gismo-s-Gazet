@@ -4,6 +4,7 @@ import { fetchNews } from '@/lib';
 export default async function Home() {
   //fetch news data
   const news: NewsResponse = await fetchNews(categories.join(','));
+  console.log(news);
 
   return (
     <main>

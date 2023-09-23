@@ -19,10 +19,8 @@ type Pagination = {
 };
 
 type NewsResponse = {
-  myQuery: {
-    pagination: Pagination;
-    data: Article[];
-  };
+  pagination: Pagination;
+  data: Article[];
 };
 
 type Category = 'business' | 'entertainment' | 'general' | 'health' | 'science' | 'sports' | 'technology';

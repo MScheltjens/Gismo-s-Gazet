@@ -19,8 +19,10 @@ type Pagination {
 }
 
 type Root {
+  myQuery: {
   data: [Article]
   pagination: Pagination
+  }
 }
 
 type Query {
