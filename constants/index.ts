@@ -1,1 +1,1 @@
-export const categories: TCategory[] = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology'];
+export const categories: Category[] = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology'];
