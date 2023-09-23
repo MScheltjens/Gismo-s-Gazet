@@ -1,6 +1,8 @@
 import { Header } from '@/components';
-import './globals.css';
 import type { Metadata } from 'next';
+import { Providers } from '@/providers/Providers';
+
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'News App',
@@ -10,10 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 transition-all">
-        <Header />
-        {children}
-      </body>
+      <Providers>
+        <body className="bg-gray-100 dark:bg-zinc-900 transition-all">
+          <Header />
+          {children}
+        </body>
+      </Providers>
     </html>
   );
 }
