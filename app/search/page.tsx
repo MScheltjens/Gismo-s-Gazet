@@ -4,6 +4,7 @@ import { fetchNews } from '@/lib';
 type Props = {
   searchParams?: { term: string };
 };
+
 export default async function Page({ searchParams }: Props) {
   const news: NewsResponse = await fetchNews('general', searchParams?.term, true);
   return (

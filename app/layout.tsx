@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <div className="bg-gray-100 dark:bg-zinc-900 transition-all min-h-screen">
             <Header />
-            {children}
+            <div className="max-w-6xl mx-auto">{children}</div>
           </div>
         </Providers>
       </body>

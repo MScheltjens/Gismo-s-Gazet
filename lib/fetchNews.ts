@@ -1,11 +1,12 @@
 import { gql } from 'graphql-request';
 import { sortNewsByImage } from '.';
 
-export const fetchNews = async (category?: Category | string, keywords?: string, isDynamic?: boolean) => {
+export const fetchNews = async (category?: Category, keywords?: string, isDynamic?: boolean) => {
+  console.log(category);
   // GraphQL query
   const query = gql`
     query MyQuery($access_key: String!, $categories: String!, $keywords: String) {
-      myQuery(access_key: $access_key, categories: $categories, countries: "be", sort: "published_desc", keywords: $keywords) {
+      myQuery(access_key: $access_key, categories: $categories, countries: "us", sort: "published_desc", keywords: $keywords) {
         data {
           author
           category
